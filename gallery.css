@@ -1,0 +1,51 @@
+.image-container{
+    display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(200px, 2fr)); 
+     gap: 15px; 
+     padding: 20px;
+     height: 350px;
+     
+    
+}
+.image-container img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+  
+    transition: transform 0.5s;
+}
+
+
+.image-container img:hover{
+    transform: scale(1.1) ;
+    transition: 0.5s;
+}
+
+.view-image{
+    position: fixed;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgb(255, 255, 255);
+}
+
+.view-image img{
+    height: 2rem;
+    width: 2rem;
+    border-radius: 2rem;
+}
+
+.view-image span{
+    color: rgba(0, 0, 0, 0.767);
+    font-size: 4rem;
+    position: absolute;
+    top: 2rem;
+    right: 8rem;
+    cursor: pointer;
+
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="gallery.css">
+    <title>Image Gallery</title>
+</head>
+<body>
+    <h1 style="text-align: center; font-family: Arial, sans-serif; color: #000000;">AI Gallery✨</h1>
+
+
+    <div class="view-image">
+        <img src="https://cdn.pixabay.com/photo/2024/10/15/15/56/ai-generated-9122562_640.png" alt="" style="width: 500px; height: 600px; object-fit: cover; border-radius: 8px; background-color: white; background: transparent;" >
+        <span>x</span>
+    </div>
+
+    <div class="image-container" style="">
+        <img src="https://cdn.pixabay.com/photo/2024/10/15/15/56/ai-generated-9122562_640.png" alt="">
+        <img src="https://cdn.pixabay.com/photo/2024/04/30/02/40/ai-generated-8729158_640.png" alt="">
+        <img src="https://cdn.pixabay.com/photo/2023/11/01/20/44/ai-generated-8359215_640.jpg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2024/06/19/06/32/woman-8839273_640.jpg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2024/09/15/19/22/ai-generated-9049876_640.jpg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2024/10/31/20/59/sekhmet-9165223_960_720.png" alt="">
+        <img src="https://cdn.pixabay.com/photo/2024/07/19/07/27/ai-generated-8905652_640.png" alt="">
+        <img src="https://cdn.pixabay.com/photo/2024/08/24/18/16/ai-generated-8994924_640.jpg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2023/10/18/12/34/wolf-8324153_640.jpg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2024/06/01/09/32/ai-generated-8801915_640.jpg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2023/04/18/10/19/ai-generated-7934798_640.jpg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2024/06/01/06/58/soldier-8801680_640.jpg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2024/06/10/13/23/ai-generated-8820774_640.jpg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2024/12/08/08/27/arjuna-9252305_640.jpg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2024/06/08/15/21/ai-generated-8816974_640.jpg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2024/04/17/14/34/ai-generated-8702189_640.png" alt="">
+        <img src="https://cdn.pixabay.com/photo/2023/06/23/17/44/ai-generated-8083911_640.jpg" alt="">
+        <img src="https://cdn.pixabay.com/photo/2023/09/05/01/49/horror-8234034_640.jpg" alt="">
+        
+    </div>
+
+    <script>
+
+        let images = document.querySelectorAll(".image-container img");
+        let viewImage = document.querySelector(".view-image");
+        let fullImage = document.querySelector(".view-image img");
+        let closeBtn = document.querySelector(".view-image span");
+
+        for(let image of images){
+            image.addEventListener("click",function(e){
+                console.log(e);
+                viewImage.style.display = "flex";
+                fullImage.src=e.target.src;    
+            })
+        }
+
+        closeBtn.addEventListener('click',function(){
+            viewImage.style.display = 'none';
+        })
+       
+    </script>
+
+</body>
+</html>
